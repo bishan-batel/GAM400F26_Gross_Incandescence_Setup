@@ -1,0 +1,8 @@
+
+# Mac Shit
+.DS_Store
+
+
+# IDE Specific
+*.DotSettings.user
+*.sln.iml
