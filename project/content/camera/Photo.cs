@@ -1,4 +1,7 @@
-using System;
+// Copyright Digipen 2026
+// Created 09/07/2026 by Kishan S Patel
+// Team Gross Incandescence
+
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,33 +10,33 @@ using Godot;
 namespace project.content.camera;
 
 /// <summary>
-/// A photo taken by <see cref="Camera"/>
+///   A photo taken by <see cref="Camera" />
 /// </summary>
 /// <param name="contents">Pixel contents of the photo</param>
 /// <param name="name">Name of the photo, used to determine filepath</param>
 public partial class Photo(Image contents, string name) : GodotObject {
   /// <summary>
-  /// User directory containing all saved photos
+  ///   User directory containing all saved photos
   /// </summary>
   public const string PhotoFolderPath = "user://photos";
 
   /// <summary>
-  /// File extension for photos, we only support PNG
+  ///   File extension for photos, we only support PNG
   /// </summary>
   public const string PhotoExtension = "png";
 
   /// <summary>
-  /// Pixel contents of the photo
+  ///   Pixel contents of the photo
   /// </summary>
   public Image Contents { set; get; } = contents;
 
   /// <summary>
-  /// Name of the photo
+  ///   Name of the photo
   /// </summary>
   public string Name { set; get; } = name;
 
   /// <summary>
-  /// Save this photo to the users computer
+  ///   Save this photo to the users computer
   /// </summary>
   public void Save() {
     EnsurePhotoDirectory();
@@ -41,8 +44,8 @@ public partial class Photo(Image contents, string name) : GodotObject {
   }
 
   /// <summary>
-  /// Ensures that the photo folder exists, creating it if
-  /// required
+  ///   Ensures that the photo folder exists, creating it if
+  ///   required
   /// </summary>
   static void EnsurePhotoDirectory() {
     if (DirAccess.DirExistsAbsolute(PhotoFolderPath)) return;
@@ -51,7 +54,7 @@ public partial class Photo(Image contents, string name) : GodotObject {
 
 
   /// <summary>
-  /// Attempts to load a folder from a path
+  ///   Attempts to load a folder from a path
   /// </summary>
   /// <param name="path"></param>
   /// <returns></returns>
@@ -72,7 +75,7 @@ public partial class Photo(Image contents, string name) : GodotObject {
   }
 
   /// <summary>
-  /// Loads all photos in the photo directory
+  ///   Loads all photos in the photo directory
   /// </summary>
   /// <returns>Array of all photos that were loaded properly</returns>
   public static Photo[] LoadAllPhotos() {
@@ -97,7 +100,7 @@ public partial class Photo(Image contents, string name) : GodotObject {
   }
 
   /// <summary>
-  /// Lists all files/directory paths inside a directory through the IEnumerable API
+  ///   Lists all files/directory paths inside a directory through the IEnumerable API
   /// </summary>
   /// <param name="dir"></param>
   /// <returns></returns>
@@ -106,9 +109,7 @@ public partial class Photo(Image contents, string name) : GodotObject {
 
     string? path = dir.GetNext();
 
-    while (!string.IsNullOrEmpty(path)) {
-      yield return path;
-    }
+    while (!string.IsNullOrEmpty(path)) yield return path;
 
 
     dir.ListDirEnd();
