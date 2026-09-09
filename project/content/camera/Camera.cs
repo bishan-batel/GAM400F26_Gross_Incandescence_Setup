@@ -3,6 +3,7 @@
 // Team Gross Incandescence
 
 using Godot;
+using project.content.photo;
 
 namespace project.content.camera;
 
@@ -28,6 +29,10 @@ public partial class Camera : Node {
     return GetViewport();
   }
 
+  /// <summary>
+  /// Generates a semi-unique photo name from the current date
+  /// </summary>
+  /// <returns></returns>
   public static string GeneratePhotoName() {
     return Time.GetDatetimeStringFromSystem(false, true);
   }

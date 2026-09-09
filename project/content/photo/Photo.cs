@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Godot;
 
-namespace project.content.camera;
+namespace project.content.photo;
 
 /// <summary>
 ///   A photo taken by <see cref="Camera" />
