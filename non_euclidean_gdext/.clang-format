@@ -1,0 +1,144 @@
+# Clang-Format Configuration made by Kishan S Patel
+# Configured to be a mix from a previous format file I have written and the
+# godot standards, some parts of the godot's formatting were omitted that were aimed
+# for easier diffing, this project will have minimal people in C++ therefore that is not neccessary.
+#
+# I am open to any changes people wish to make for this, if you are making a PR
+# with changes, make sure to apply this to all C++ files in our project (ignoring submodules like from godot-cpp)
+#
+# Godot uses 'prek' ('pre-commit' but faster) to do this easily, maybe we look into using it for simple stuff like this?
+#
+# prek run clang-format --all
+
+---
+StatementMacros: []
+StatementAttributeLikeMacros: []
+WhitespaceSensitiveMacros: []
+NamespaceMacros: []
+Language: Cpp
+BasedOnStyle: LLVM
+LineEnding: LF
+AlignAfterOpenBracket: BlockIndent
+AlignArrayOfStructures: Left
+AlignConsecutiveAssignments: false
+AlignConsecutiveDeclarations: false
+AlignConsecutiveMacros: AcrossEmptyLines
+AlignOperands: AlignAfterOperator
+AlignTrailingComments:
+    Kind: Always
+    OverEmptyLines: 1
+AllowAllArgumentsOnNextLine: false
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+AllowShortBlocksOnASingleLine: true
+AllowShortCompoundRequirementOnASingleLine: true
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: All
+AllowShortLambdasOnASingleLine: All
+AlwaysBreakTemplateDeclarations: Yes
+# BreakTemplateDeclarations: Yes
+AlwaysBreakBeforeMultilineStrings: false
+BinPackArguments: false
+BinPackParameters: false
+BitFieldColonSpacing: Both
+Standard: c++20
+BraceWrapping:
+    AfterCaseLabel: false
+    AfterClass: false
+    AfterControlStatement: Never
+    AfterEnum: false
+    AfterFunction: false
+    AfterNamespace: false
+    AfterStruct: false
+    AfterUnion: false
+    AfterExternBlock: false
+    BeforeCatch: false
+    BeforeElse: false
+    BeforeLambdaBody: false
+    BeforeWhile: false
+    SplitEmptyFunction: false
+    SplitEmptyRecord: false
+    SplitEmptyNamespace: false
+BreakBeforeBraces: Custom
+BreakBeforeConceptDeclarations: Never
+BreakBeforeTernaryOperators: true
+BreakBeforeBinaryOperators: NonAssignment
+BreakConstructorInitializers: AfterColon
+BreakConstructorInitializersBeforeComma: false
+BreakInheritanceList: AfterComma
+BracedInitializerIndentWidth: 2
+BreakAfterAttributes: Leave
+# AlwaysBreakAfterDefinitionReturnType: None
+# AlwaysBreakAfterReturnType: None
+PenaltyReturnTypeOnItsOwnLine: 9990
+ColumnLimit: 80
+ConstructorInitializerAllOnOneLineOrOnePerLine: true
+IncludeIsMainRegex: "([-_](test|unittest))?$"
+IndentCaseLabels: true
+IndentCaseBlocks: true
+# IndentPPDirectives: BeforeHash
+InsertBraces: true
+InsertNewlineAtEOF: true
+MacroBlockBegin: ""
+MacroBlockEnd: ""
+NamespaceIndentation: All
+SpaceAfterCStyleCast: false
+SpaceAfterTemplateKeyword: false
+SpaceBeforeRangeBasedForLoopColon: false
+SpaceInEmptyParentheses: false
+SpacesInAngles: false
+SpacesInConditionalStatement: false
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+TabWidth: 4
+ContinuationIndentWidth: 2
+EmptyLineAfterAccessModifier: Always
+EmptyLineBeforeAccessModifier: LogicalBlock
+FixNamespaceComments: false
+CompactNamespaces: false
+UseTab: Always
+MaxEmptyLinesToKeep: 1
+PackConstructorInitializers: NextLine
+ReferenceAlignment: Left
+QualifierAlignment: Custom
+QualifierOrder:
+    [inline, static, friend, constexpr, const, volatile, restrict, type]
+RequiresClausePosition: WithPreceding
+RequiresExpressionIndentation: OuterScope
+SeparateDefinitionBlocks: Always
+SortIncludes: Never
+SortUsingDeclarations: Never
+SpaceAfterLogicalNot: false
+PointerAlignment: Left
+SpaceBeforeCtorInitializerColon: false
+JavaImportGroups:
+    - org.godotengine
+    - android
+    - androidx
+    - com.android
+    - com.google
+    - java
+    - javax
+IncludeBlocks: Regroup
+IncludeCategories:
+    - Regex: ^"(core|drivers|editor|main|scene|servers|tests)/.*"$
+      Priority: 20
+    - Regex: ^"(modules|platform)/.*"$
+      Priority: 30
+    - Regex: ^<thirdparty/.*>$
+      Priority: 40
+    - Regex: ^<(windows|Jolt/Jolt|platform_gl)\.h>$
+      Priority: 50
+    - Regex: ^<.*\.(h|hpp)>$
+      Priority: 60
+    - Regex: ^<.*>$
+      Priority: 70
+    - Regex: ^".*\.compat\.inc"$
+      Priority: 0
+      SortPriority: 1
+    - Regex: ^".*"$
+      Priority: 10
+Cpp11BracedListStyle: false
+...
