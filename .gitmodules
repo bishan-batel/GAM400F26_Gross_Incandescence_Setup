@@ -1,4 +1,4 @@
 [submodule "noneuclidean-gdext/godot-cpp"]
-	path = noneuclidean-gdext/godot-cpp
+	path = non_euclidean_gdext/godot-cpp
 	url = https://github.com/godotengine/godot-cpp
 	branch = 4.5
