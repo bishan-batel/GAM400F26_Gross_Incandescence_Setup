@@ -38,6 +38,7 @@
           buildInputs = [
             dotnetSdk
             pkgs.godot_4-mono
+            pkgs.scons
           ] ++ pkgs.lib.optional (!pkgs.hostPlatform.isDarwin) [ trenchbroom ];
 
           shellHook = /* bash */ ''

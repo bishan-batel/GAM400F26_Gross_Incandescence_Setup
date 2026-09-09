@@ -1,0 +1,18 @@
+.sconsign.dblite
+config.log
+
+compile_commands.json
+
+# Intermediate Compile Targets
+*.o
+*.os
+*.obj
+*.a
+*.pdb
+*.exp
+
+# Seriously considering just committing these manually
+# *.lib
+# *.so
+# *.dylib
+# *.dll
