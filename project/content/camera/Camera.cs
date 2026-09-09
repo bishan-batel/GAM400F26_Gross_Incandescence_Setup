@@ -1,11 +1,13 @@
-using System;
-using System.Threading.Tasks;
+// Copyright Digipen 2026
+// Created 09/07/2026 by Kishan S Patel
+// Team Gross Incandescence
+
 using Godot;
 
 namespace project.content.camera;
 
 /// <summary>
-/// Camera used by the player to take photos
+///   Camera used by the player to take photos
 /// </summary>
 public partial class Camera : Node {
   public Photo TakePhoto() {
@@ -18,8 +20,8 @@ public partial class Camera : Node {
   }
 
   /// <summary>
-  /// Gets the viewport used for the photo, this is separate from the
-  /// global viewport which includes UI and the such
+  ///   Gets the viewport used for the photo, this is separate from the
+  ///   global viewport which includes UI and the such
   /// </summary>
   /// <returns></returns>
   public Viewport GetCameraViewport() {

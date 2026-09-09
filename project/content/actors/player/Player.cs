@@ -1,3 +1,7 @@
+// Copyright Digipen 2026
+// Created 09/07/2026 by Kishan S Patel
+// Team Gross Incandescence
+
 using Godot;
 
 namespace project.content.actors.player;
