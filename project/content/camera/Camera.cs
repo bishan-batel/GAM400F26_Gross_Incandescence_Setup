@@ -12,11 +12,9 @@ namespace project.content.camera;
 public partial class Camera : Node {
   public Photo TakePhoto() {
     Image image = GetCameraViewport().GetTexture().GetImage();
+    string name = GeneratePhotoName();
 
-
-    GetViewport().GetTexture().GetImage().SavePng("user://photo.png");
-
-    return new Photo(image, GeneratePhotoName());
+    return new Photo(image, name);
   }
 
   /// <summary>
