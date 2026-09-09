@@ -23,3 +23,4 @@ The `project/` folder here is meant to be a test project isolated to just this G
 
 ## Links for Fanta 
 * [Example Tutorial that includes more detailed build instructions](https://docs.godotengine.org/en/stable/tutorials/scripting/cpp/gdextension_cpp_example.html)
+* [Compiling the Godot Engine for Windows (while either on Windows or on Linux & cross compiling)](https://docs.godotengine.org/en/4.4/contributing/development/compiling/compiling_for_windows.html)
